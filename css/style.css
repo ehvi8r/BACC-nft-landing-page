@@ -8,11 +8,12 @@
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Arvo', serif;
   --font-code: 'Roboto', monospace;
-  --bg-color: #00163f;
+  --bg-color: #000000;
   --font-color: #ffffff;
-  --btn-bg-color: #ffffff;
-  --accent-color: #be7efe;
-  --header-shadow: #000 0px 0px 5px;
+  --btn-bg-color: #000000;   /* changed from #ffffff to #000000 */
+  --cnt-bg-color: #ffffff;   /* added --cnt-bg-color for counters */
+  --accent-color: #B0AFB1;   /* changed from #B0AFB1 to #1d1b16 (just slightly off solid black) */
+  --header-shadow: #000 0px 0px 5px;  /* changed from 0px 0px 5px; to 0px, 0px. 3px */
 }
 
 * {
@@ -62,14 +63,14 @@ header .container {
   display: inline-block;
   padding: 1rem 2rem;
   background: var(--btn-bg-color);
-  color: var(--accent-color);
+  color: var(--font-color);          /* changed --accent-color to --font-color */
   font-family: var(--font-secondary);
   font-style: italic;
   font-weight: bold;
   font-size: 1rem;
   text-transform: capitalize;
   transition: all 0.3s ease;
-  box-shadow: 4px 4px 0 0 var(--accent-color);
+  box-shadow: 4px 4px 0 0 var(--button-bg-color);  /* changed 4px 4px 0 0 to 2px 2px 0 0 */
   cursor: pointer;
   position: relative;
   text-decoration: none;
@@ -77,18 +78,21 @@ header .container {
 }
 .btn:hover {
   box-shadow: none;
+  color:#B0AFB1;
 }
 
 .wallet-btn {
-  border-radius: 5rem;
-  margin-left: 2rem;
+  border-radius: 5rem;     /* was 5 */
+  margin-left: 2rem;       /* was 2 */
   border-color: transparent;
+  transform: translateY(4px);   /* added to give a hover effect */
 }
 
 .hero-btn {
-  border-radius: 4px;
-  font-size: 1.2rem;
-  padding: 1.5rem 3rem;
+  border-radius: 4px;     /* was 4 */
+  font-size: 1.2 rem;       /* was 1.2 */
+  padding: 1.5rem 3rem;     /* was 1.5rem 3rem */
+  transform: translateY(4px);   /* added to give a hover effect */
 }
 
 /* COUNTDOWN SECTION */
@@ -97,6 +101,16 @@ section {
   flex: 1 1 auto;
 }
 
+section2 {
+  flex: 1 1 auto;
+}
+
+section2 .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
+}
+	
 .countdown {
   display: flex;
   flex-direction: column;
@@ -128,7 +142,7 @@ section {
   border-radius: 4px 4px 0 0;
 }
 .countdown .clock-item .count-text {
-  background: var(--btn-bg-color);
+  background: var(--cnt-bg-color);         /* change to --cnt-bg-color */
   font-family: var(--font-secondary);
   font-size: 1.1rem;
   color: var(--bg-color);

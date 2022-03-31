@@ -1,22 +1,44 @@
 /* FONTS */
 /* NEED to import final product fonts from google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+/* Link for AOS is in index
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+*/
 /* GLOBAL STYLES */
 /* With new fonts, need to change primary, secondary and code fonts below */
 :root {
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Arvo', serif;
   --font-code: 'Roboto', monospace;
-  --bg-color: #000000;
+  --bg-color: #000000;                /* changed to #192E41 Midnight Blue from black #000000  */
+  --bg-color-transparent: #00163f80;
   --font-color: #ffffff;
-  --btn-bg-color: #000000;   /* changed from #ffffff to #000000 */
-  --cnt-bg-color: #ffffff;   /* added --cnt-bg-color for counters */
-  --accent-color: #B0AFB1;   /* changed from #B0AFB1 to #1d1b16 (just slightly off solid black) */
-  --header-shadow: #000 0px 0px 5px;  /* changed from 0px 0px 5px; to 0px, 0px. 3px */
+  --btn-bg-color-blue: #7A97AB;       /* changed from #192E41 Midnight Blue from #ffffff to #000000 to AED2E7*/
+  --btn-bg-color-sage: #7A9B90;       /* changed to #192E41 Midnight Blue from #ffffff to #000000 to AED2E7*/
+  --button-bg-color: #00163f80E;      /* added this is a border color so it is transparent  */
+  --cnt-bg-color: #ffffff;            /* added --cnt-bg-color for counters */
+  --blue-bg-color: #7A97AB;           /* changed from #0D659D Blue Grotto from #6495ED */
+  --blue-mint-button-color: #7A97AB;  /* changed from #0D659D Blue Grotto from #191970 */
+   /* Color Pallet Misty Midnight  */  
+    --midnight-blue: #192E41;
+    --dark-blue: #05263B;
+    --blue-grotto: #0D659D;
+    --misty-blue: #BBC8DE;	
+	/* Colour Pallet for High Flight  */
+	--highflight-black:  #000000;
+    --blue: #7A97AB;
+    --light-blue: #B7C7D3;
+    --sage: #7A9B90;
+	--eggplant: #84657A;
+	--tan: #BC955C;
+	--rust: #DE6B30;
+  --accent-color: #B7C7D3;            /* changed from #BBC8DE Misty Blue from #B0AFB1 (Grey)from #1d1b16 (Dark Grey) */
+  /* --header-shadow: #000 0px 0px 5px;   changed from 0px 0px 5px; */
+  --header-shadow: var(--accent-color) 0px 0px 0px;  /** change to 0 0 0 4 from 0 0 0 **/
+  --card-shadow: var(--accent-color) 0px 0px 20px;
 }
 
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -57,20 +79,36 @@ header .container {
   align-items: center;
 }
 
+ .banner-menu {
+	 display: flex;                      /* added top menu bar for white text no underline */
+	 font-size: 15px;                    /* 0.5rem; */
+	 line-height: 1;   
+     color: #B7C7D3;         
+	 gap: 2rem;
+	 align-items: center;
+	 /* text-decoration: none; */
+	 transform: translateY(4px);   /* added to give a hover effect */
+  }
+.banner-menu:hover {
+  box-shadow: none;
+  color:#B0AFB1;
+}
+	
 /* BUTTONS */
 
 .btn {
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.25rem 2rem;             /* changed from 1 2 to 2 2  **/
   background: var(--btn-bg-color);
-  color: var(--font-color);          /* changed --accent-color to --font-color */
-  font-family: var(--font-secondary);
+  color: var(--font-color);         /* changed --accent-color to --font-color */
+  font-family: var(--font-code);    /* changed to --font-code */
   font-style: italic;
-  font-weight: bold;
+  /*font-weight: bold;               changed to remove bold */
   font-size: 1rem;
   text-transform: capitalize;
   transition: all 0.3s ease;
-  box-shadow: 4px 4px 0 0 var(--button-bg-color);  /* changed 4px 4px 0 0 to 2px 2px 0 0 */
+  box-shadow: 4px 4px 0 0 var(--accent-color);  /* changed 4px 4px 0 0 to 4px 4px 4px 4px *no doesnt work */
+  border-color: transparent; 
   cursor: pointer;
   position: relative;
   text-decoration: none;
@@ -82,16 +120,16 @@ header .container {
 }
 
 .wallet-btn {
-  border-radius: 5rem;     /* was 5 */
-  margin-left: 2rem;       /* was 2 */
+  border-radius: 5rem;          /* was 5 */
+  margin-left: 2rem;            /* was 2 */
   border-color: transparent;
   transform: translateY(4px);   /* added to give a hover effect */
 }
 
 .hero-btn {
-  border-radius: 4px;     /* was 4 */
-  font-size: 1.2 rem;       /* was 1.2 */
-  padding: 1.5rem 3rem;     /* was 1.5rem 3rem */
+  border-radius: 4px;           /* was 4 */
+  font-size: 1.2 rem;           /* was 1.2 */
+  padding: 1.5rem 3rem;         /* was 1.5rem 3rem */
   transform: translateY(4px);   /* added to give a hover effect */
 }
 
@@ -101,16 +139,16 @@ section {
   flex: 1 1 auto;
 }
 
-section2 {
+body {
   flex: 1 1 auto;
 }
 
-section2 .container {
+body .container {
   flex-direction: row;
   justify-content: space-between;
   align-items: left;
 }
-	
+
 .countdown {
   display: flex;
   flex-direction: column;
@@ -129,7 +167,7 @@ section2 .container {
   height: auto;
 }
 .countdown .clock-item .count-number {
-  background: var(--accent-color);
+  background: var(--blue-bg-color);       /** change to blue-bg-color **/
   color: var(--font-color);
   font-size: 2rem;
   font-weight: 700;
@@ -139,10 +177,10 @@ section2 .container {
   width: 100%;
   text-align: center;
   line-height: 1;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;            /* changed to 4px 4px 4px 4px from 4px 4px 0 0  *no doesn't work */
 }
 .countdown .clock-item .count-text {
-  background: var(--cnt-bg-color);         /* change to --cnt-bg-color */
+  background: var(--cnt-bg-color);       /* change to --cnt-bg-color */
   font-family: var(--font-secondary);
   font-size: 1.1rem;
   color: var(--bg-color);
@@ -151,9 +189,8 @@ section2 .container {
   width: 100%;
   text-align: center;
   line-height: 1;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;             /* changed to 4px 4px 4px 4px from 0 0 4px 4px  *no changed back  */
 }
-
 .countdown h1 {
   text-shadow: 2px 2px 0 var(--accent-color);
   font-style: italic;
@@ -169,6 +206,97 @@ section2 .container {
   text-align: center;
 }
 
+/* MINT CONTAINER */
+
+.mint-container {
+  width: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: left;  /** changed centre to left **/
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;  
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mint-qty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--blue-bg-color);  /** changed from --cnt-bg-color to --blue-accent-color  **/
+  border-radius: 5px;  
+  width: 100%;                             /* added this */
+  border-color: transparent;               /* added this */
+}
+
+.mint-qty > span {
+  display: flex;
+}
+
+.mint-btn {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: auto;
+  background-color: var(--blue-bg-color);  /** added this line  **/
+ /* border-color: transparent;                 added this */
+}
+
+.input-number {
+  height: 100%;
+  padding: 1rem;                           
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+}
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+  user-select: none;
+  background-color: var(--bg-color);  /** added this line  **/
+}
+
+.total-price-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;  
+  padding: 1rem 0 2rem;
+}
+
+.total-price-container p {
+  color: var(--accent-color);
+}
+
+/* MINTED CONTAINER */
+
+.minted-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left; /** changed centre to left **/
+  align-items: center;
+  width: 100%;  
+}
+
+.minted-container h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.minted-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.minted-container p {
+  margin: 1rem 0;
+}
+
 /* OWNER STYLES */
 
 .owner-status {
@@ -176,22 +304,476 @@ section2 .container {
   text-align: center;
 }
 
+/* COLLABORATION */
+
+.collaboration {
+  padding: 5rem 0;
+  background: var(--blue-bg-color);
+  text-align: center;
+  color: var(--bg-color);
+}
+.collaboration h1 {
+  text-shadow: 2px 2px 0 var(--font-color);
+  font-style: italic;
+  margin: 2rem 0;
+  font-size: 3.5rem;
+}
+.collaboration p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: var(--font-secondary);
+  margin: 1rem 0;
+}
+.collaboration blockquote {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.collaboration .flex {
+  display: flex;
+  align-items: center;
+}
+.collaboration span img {
+  width: 20vw;
+  margin-left: 1rem;
+  box-shadow: 2px 2px 4px var(--font-color);;
+}
+
+.collabs {
+  display: flex;
+  justify-content: center;
+}
+.collabs h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.collabs .collab {
+  height: 15rem;
+  margin: 3rem;
+}
+.collabs img {
+  height: 100%;
+  border-radius: 10px;
+}
+.collabs .collab:last-of-type img {
+  filter: hue-rotate(180deg);
+}
+
+/* DECODE */
+
+.decode {
+  padding: 5rem 0;
+  background: var(--btn-bg-color);
+  text-align: center;
+  color: var(--bg-color);
+}
+.decode h1 {
+  text-shadow: 2px 2px 0 var(--font-color);
+  font-style: italic;
+  margin: 0 0 2rem 0;
+  font-size: 3.5rem;
+}
+.decode h2 {
+  margin: 2rem 0 0 0;
+  font-size: 2rem;
+}
+.decode p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: var(--font-secondary);
+  margin: 1rem 0;
+}
+.decode span {
+  float: left;
+}
+.decode img {
+  width: 378px;
+  height: 210px;
+  margin-right: 1rem;
+  object-fit: none;
+  object-position: bottom left;
+  box-shadow: 2px 2px 4px var(--font-color);
+}
+.decode .hero-btn {
+  background: var(--bg-color);
+  color: var(--font-color);
+}
+
+/* ROADMAP */
+
+.roadmap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.wrapper {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line {
+  position: absolute;
+  height: calc(100% - 20px);
+  width: 4px;
+  background: var(--blue-bg-color);
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.wrapper .row {
+  display: flex;
+}
+.wrapper .row-1 {
+  justify-content: flex-start;
+}
+.wrapper .row-2 {
+  justify-content: flex-end;
+}
+.wrapper .row section {
+  flex: initial;
+  background: var(--blue-bg-color);
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.wrapper .row section::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: var(--blue-bg-color);
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.row-1 section::before {
+  right: -7px;
+}
+.row-2 section::before {
+  left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon {
+  position: absolute;
+  background: var(--light-blue);
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  font-style: normal;
+  box-shadow: 0 0 0 4px var(--blue-bg-color), inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.center-line .scroll-icon {
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.row-1 section .icon {
+  top: 15px;
+  right: -60px;
+}
+.row-2 section .icon {
+  top: 15px;
+  left: -60px;
+}
+.row section .details,
+.row section .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row section .details .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+.row section .details span:last-of-type {
+  color: var(--bg-color);
+  font-weight: bold;
+}
+.row section p {
+  margin: 10px 0 17px 0;
+}
+.row section .bottom a {
+  text-decoration: none;
+  background: var(--btn-bg-color);;
+  color: var(--bg-color);;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.row section .bottom a:hover {
+  transform: scale(0.97);
+}
+.roadmap-v2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  z-index: 1;
+}
+.roadmap-v2 p {
+  background: var(--blue-bg-color);
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+}
+@media (max-width: 790px) {
+  .wrapper .center-line {
+    left: 40px;
+  }
+  .wrapper .row {
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row section {
+    width: 100%;
+  }
+  .row-1 section::before {
+    left: -7px;
+  }
+  .row-1 section .icon {
+    left: -60px;
+  }
+}
+@media (max-width: 440px) {
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon {
+    display: none;
+  }
+  .wrapper .row {
+    margin: 10px 0;
+  }
+}
+
+/* TEAM */
+
+.team {
+  background: var(--light-blue);
+  text-align: center;
+  padding: 1rem 0;
+}
+.team h1 {
+  color: var(--light-blue);
+  text-shadow: 1px 1px 0 var(--font-color);
+  /* font-style: italic; */
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+.team h2 {
+  color: var(--light-blue);
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+.team .row {
+  display: flex;
+}
+.team .row img {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* FAQ */
+
+
+.faq {
+  padding-bottom: 3rem;
+}
+
+.faq ul li i:before, .faq ul li i:after, .faq p {
+  transition: all 0.25s ease-in-out;
+}
+
+.faq h1{
+  text-align: center;
+}
+
+.faq h2 {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.faq p {
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-family: var(--font-secondary);
+  overflow: hidden;
+  opacity: 1;
+  transform: translate( 0 , 0 );
+  margin-top: 1rem;
+  max-height: 800px;
+  z-index: 2;
+}
+
+.faq a {
+  color: var(--btn-bg-color);
+  font-weight: 700;
+}
+
+.faq ul {
+  list-style: none;
+}
+.faq ul li {
+  position: relative;
+  padding: 1rem;
+  border-top: 1px dotted var(--blue-bg-color);
+}
+.faq ul li:last-of-type {
+  padding-bottom: 0;
+}
+.faq ul li i {
+  position: absolute;
+  transform: translate(-1rem, 0);
+  margin-top: 16px;
+  right: 0;
+}
+.faq ul li i:before, .faq ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: var(--blue-bg-color);
+  width: 3px;
+  height: 9px;
+}
+.faq ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.faq ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.faq ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.faq ul li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.faq ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.faq ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  /* font-weight: bold;  NO Bold */
+  padding: 0.5rem 0;
+  background: var(--light-blue);
+  color: var(--bg-color);
+}
+
+/* EMAIL FORM  */
+email-form {
+ text-align: left;
+ width: 550px;
+ height: 25px;
+ margin: auto;
+ position: relative;
+}
+email-input {
+ width: 250px;
+ height: 15px;
+}
+
+/* SPINNER */
+.dot-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(3);
+}
+
+/* SLIDDER */
+
+.splide {
+  position: absolute;
+  top: 98px;  /* 120 */ 
+  left: 5rem;
+  gap: 2rem;
+  z-index: -1;
+  max-height: 100vh;
+}
+
+.splide .splide__track {
+  max-height: 100px;  /* 100vh */
+}
+.splide .splide__slide {
+  border: var(--accent-color) solid;
+  border-width: 5px 10px;
+}
+
+.splide .splide__slide img {
+  width: 98px;  /* 100% or 80% */
+}
+
+.splide-2 .splide__slide img {
+  width: 98px;  /* 20vw or 16vw */
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
+  .logo img {
+    width: 25vw;
+    margin-right: 10vw;
+  }
   .menu {
     gap: 1rem;
   }
+  .menu img {
+    width: 5vw;
+  }
   .wallet-btn {
     margin-left: 0;
-    padding: 1rem;
+    padding: 0.25rem 0.5rem;
     max-width: 8rem;
+    font-size: 0.75rem;
   }
-  .countdown h1 {
-    font-size: 2rem;
+  .not-connected {
+    background-color: var(--bg-color-transparent);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 0 auto;
   }
-  .countdown p {
+  .not-connected h1 {
+    font-size: 2.5rem;
+  }
+  .not-connected h2 {
+    font-size: 1.5rem;
+  }
+  .not-connected p, .not-connected a {
     font-size: 1rem;
   }
 }
- 
+
+	
+/* UTILITIES */
+/* code this out for testing  
+.hidden {
+  display: none;
+}
+*/

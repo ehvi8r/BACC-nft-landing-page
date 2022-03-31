@@ -8,23 +8,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	  
+
+	 <!-- Not required 
 	  <meta name="description" content="The Bored Ape Cannabis Club is a collection of 10,000 unique Bored Ape NFTs, unique digital collectibles living on the Polygon blockchain." />
 	  <meta name="twitter:card" content="summary" />
 	  <meta name="twitter:title" content="The Bored Ape Cannabis Club" />
 	  <meta name="twitter:description" content="A limited NFT collection where the token itself doubles as your membership to a cannabis club for apes. The club is open! Start a session with us." />
+    -->
 
     <!-- favicon REPLACE ALL OF THE ICONS -->
-    <link rel="icon" href="images/x-icon/favicon.ico"/>
+    <link rel="icon" href="images/x-icon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/x-icon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/x-icon/favicon-16x16.png" />
     <link rel="manifest" href="images/x-icon/site.webmanifest" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- AOS animation code downloaded to frontedn folder -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />  -->
-    <link rel="stylesheet" href="aos-master/dist/aos.css" rel="stylesheet" /> 
+    <!-- AOS animation code downloaded to frontend folder, giving 404 error on Netlify ** FOLDER WAS MISSING IN GITHUB -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="aos-master/dist/aos.css" /> --> 
 
     <!-- This is the slider code -->	  
     <link rel="stylesheet" href="css/three-dots.min.css" />
@@ -32,6 +34,7 @@
 
   </head>
   <body>
+
     <header>
       <div class="container">
         <div class="logo">
@@ -113,7 +116,8 @@
     <section class="container">
       <div class="owner-status"></div>
       <div class="countdown">
-	    <!-- Launch date is set for Sat 16 Apr at 80:00:45 UTC/my local time 02:00:45, Config.js: 2022-04-16T08:00:45+00:00 -->
+	    <!-- Launch date is set for Sat 16 Apr at 80:00:45 UTC/my local time 02:00:45, Config.js: 2022-04-16T08:00:45+00:00 
+      This is the date method from the old repo, it is giving me an error in countdown.js -->
         <ul
           id="countdown"
           class="count-down"
@@ -173,7 +177,47 @@
 		   <br>
           <br>
 		</div>
-       </section>
+	  </section>
+	</div>	 
+	  
+<div class="main-wrapper">	  
+<section>
+        <!-- <div id="spinner" class="dot-spin"></div> -->
+    
+          <div class="splide-2" align="center">
+            <div class="splide__track">
+              <ul class="splide__list" >
+                <li class="splide__slide">
+                  <img src="images/slider/1.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                  <img src="images/slider/2.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                  <img src="images/slider/3.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                  <img src="images/slider/4.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                  <img src="images/slider/5.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                  <img src="images/slider/6.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                  <img src="images/slider/7.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                  <img src="images/slider/8.png" alt="slider image" height="98" width="98"/>
+                </li>
+                <li class="splide__slide">
+                   <img src="images/slider/9.png" alt="slider image" height="98" width="98"/>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>	  
 	</div>	  
 
 <!-- <footer>Copyright © Bored Ape Cannabis Club 2022</footer>-->
@@ -231,10 +275,10 @@
         </div>
    </section> 
 
-    <!--  <div id="spinner" class="dot-spin"></div>  -->
+     <div id="spinner" class="dot-spin"></div> 
 
-    <script src="aos-master/src/js/aos.js"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <!-- <script src="aos-master/src/js/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/metamask-onboarding.bundle.js"></script>
     <script src="js/web3.min.js"></script>
     <script src="js/splide.min.js"></script>

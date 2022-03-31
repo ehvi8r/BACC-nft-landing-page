@@ -32,18 +32,18 @@ window.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  const splide = new Splide(".splide", {
-    type: "loop",
-    arrows: false,
-    perMove: 3,
-    pagination: false,
-    autoplay: true,
-    direction: 'ttb',
-    height: "100%",
-    width: '30vw',
-    // autoHeight: true,
-  });
-  splide.mount();
+// const splide = new Splide(".splide", {
+//  type: "loop",
+//  arrows: false,
+//  perMove: 3,
+//  pagination: false,
+//   autoplay: true,
+//   direction: 'ttb',
+//   height: "100%",
+//   width: '30vw',
+//    // autoHeight: true, (This was already commented out)
+//  });
+//  splide.mount();
 
   const splideTwo = new Splide(".splide-2", {
     type: "loop",

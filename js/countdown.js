@@ -1,7 +1,7 @@
 //Countdown Timer
 const clockdiv = document.getElementById("countdown");
 const countDownTime = new Date(
-  clockdiv.getAttribute("data-date")
+  clockdiv.getAttribute("data-date") 
 ).getTime();
 
 const countdownfunction = setInterval(function () {

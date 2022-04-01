@@ -41,7 +41,7 @@
 	    <section class="container"> 
 				  <a href="index.html" target="_self" alt="home" class="banner-menu">home </a>
 			        <img src="images/banners-and-logos/ape.png" alt="spacer" width="10" height="1" />  
-          <a href="#About" alt="about" class="banner-menu">about </a>
+                  <a href="#About" alt="about" class="banner-menu">about </a>
 			        <img src="images/banners-and-logos/ape.png" alt="spacer" width="10" height="1" />  
 				  <a href="#Team" alt="team" class="banner-menu">team </a>
 			        <img src="images/banners-and-logos/ape.png" alt="spacer" width="10" height="1" />  
@@ -225,75 +225,85 @@
 </section>
 </section>
 <!--  End Timings/Schedule -->
-	    <p>Mint your Bored Ape Cannabis Club NFT, once minted you own it, you can hold it forever or you can list it on Opensea or any other secondary market for resale if you wish to do so:</p><br>	
-	    <h3>Mint your BACC NFT:</h3><br>
-	  
-        <div id="mintContainer" class="mint-container hidden">
-            <div class="info-container">
-              <div>
-                <h3>Supply</h3>
-                <p id="totalSupply">100</p>
-              </div>
-              <div>
-                <h3>Price Per Mint</h3>
-                <p id="pricePerMint">0.05 ETH</p> <p>100 MATIC = ~0.05 ETH</p>
-              </div>
-              <div>
-                <h3>Max</h3>
-                <p id="maxPerMint">5 per wallet</p>
-              </div>
-            </div>
-            <div class="mint-qty">
-              <span>
-                <button class="input-number-decrement btn" id="mintDecrement">–</button>
-                <input
-                  id="mintInput"
-                  class="input-number btn"
-                  type="number"
-                  value="1"
-                  min="1"
-                  max="10"
-                />
-                <button class="input-number-increment btn" id="mintIncrement">+</button>
-              </span>
-              <button id="setQtyMax" class="input-number btn">SET MAXIMUM</button>
-		    </div>
-            <div class="total-price-container">
-              <h3>Total: </h3>
-              <p id="totalPrice">.001 ETH</p>
-            </div>
-            <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
-			    <br><br>
-          </div>
 
-     <div class="minted-container card show-card hidden">
-		<div class="info-container">
-		<h3>🎉  Minted!</h3>
-          <br>
-	      <span>
-            <p>Here's your trasaction link:</p>
-            <a
-              id="mintedTxnBtn"
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button class="hero-btn btn mint-btn">View Transaction</button>
-            </a>
-		    </span>
-	      <span>
-            <p>View it in the collection:</p>
-            <a
-              id="mintedLinkBtn"
-              href="https://opensea.io/collection/theboredapecannabisclub"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button class="hero-btn btn mint-btn">View Collection</button>
-            </a>
-	      </span>
-        </div>
-	 </div>
+   <section class="container not-connected show-not-connected">	
+	  <div id="mint">	
+        <div class="minted-container card show-card hidden">	
+        <div class="mint-container">	
+        <div id="mint-info" align="left">	       
+	    <p>Mint your Bored Ape Cannabis Club NFT, once minted you own it, you can hold it forever or you can list it on Opensea or any other secondary market for resale if you wish to do so:</p><br>		  
+		  <div id="mintContainer" class="mint-container hidden">
+          <div class="info-container" >	
+            <div> 
+              <h3> Supply  </h3>
+              <p id="totalSupply">10000</p>
+            </div>
+            <div>
+              <h3> Price Per Mint  </h3>
+              <p id="pricePerMint">100 MATIC = ~.05 ETH</p>  <!-- or '100.0 MATIC' for production (Polygon)-->
+            </div>				
+              <h3> Max:  </h3>
+              <p id="maxPerMint" align="left">10 mints per wallet</p>
+            </div>
+          </div>
+          <div class="mint-qty">
+             <span>
+              <button class="input-number-decrement btn" id="mintDecrement">–</button>
+              &nbsp;<input
+                id="mintInput"
+                class="input-number btn"
+                type="number"
+                value="1"
+                min="1"
+                max="10"
+              />&nbsp;
+              <button class="input-number-increment btn" id="mintIncrement">+</button>
+             </span>
+            <button id="setQtyMax" class="input-number btn">SET MAXIMUM</button>
+          </div>
+          <div class="total-price-container">
+            <h3>Total: </h3>
+            <p id="totalPrice">.001 ETH</p>         
+          <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
+		  </div>
+        </div>	
+      </div>  
+	</div>
+				
+    <div id="leftDiv">
+		
+      <div class="minted-container card show-card hidden">	
+		 <br><br>
+        <div class="info-container">
+		 <br>
+        <h3>🎉 Once they are Minted... </h3>
+		    <p>
+           <img src="images/banners-and-logos/ape.png" alt="spacer" width="30" height="30" />
+        </p>
+        <br>
+	<span>
+        <a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer">
+          <button class="hero-btn btn mint-btn">View Transaction</button>
+        </a>
+	</span>
+	<span>
+        <img src="images/banners-and-logos/ape.png" alt="spacer" width="30" height="30" />   
+	</span>
+    <span>
+        <a
+          id="mintedLinkBtn"
+          href="https://opensea.io/collection/theboredapecannabisclub"
+          target="_blank"
+          rel="noopener noreferrer"
+         >
+          <button class="hero-btn btn mint-btn">View Collection</button>
+        </a>
+	 </span>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>	
 </body>	
 
 <p align="left"><br>

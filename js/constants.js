@@ -1,3 +1,4 @@
+// replace with contract address from \backend\build\contract 
 const contractAddress = "0xfBd22dE0A49A7C1Ae0D53F040b171FC30a8d9b15"; //Replace with your own contract address
 const chain = "rinkeby"; // rinkeby or polygon
 
